@@ -8,6 +8,8 @@ const errorMessage = document.getElementById('errorMessage');
 const pricePerKm = 0.21;
 const nameSurname = document.querySelector("#nameSurname");
 const tarifs = document.querySelector("#tarifs");
+const ticketContainer = document.getElementById('ticketContainer');
+
 
 
 let km = document.querySelector("#km");
@@ -22,6 +24,8 @@ let price;
 //confirm button
 generator.addEventListener('click', function() {
     
+    ticketContainer.classList.remove('d-none');
+    ticketContainer.classList.add('d-block');
     price = (pricePerKm * parseInt(km.value));
     nameSurname.innerHTML = username.value;
     tarifs.innerHTML = ageRange.value;
@@ -30,6 +34,10 @@ generator.addEventListener('click', function() {
 
     if(isNaN(parseInt(km.value))){
         errorMessage.innerHTML = 'ATTENZIONE: Inserire solo numeri nel campo "Km da percorrere"'
+        ticketContainer.classList.add('d-none');
+        ticketContainer.classList.remove('d-block');
+
+
     } else {
         
         if(ageRange.value == "standard"){
@@ -45,6 +53,10 @@ generator.addEventListener('click', function() {
            
         } else {
             errorMessage.innerHTML = 'ATTENZIONE: Selezionare tariffa prima di premere "Genera Biglietto"'
+            ticketContainer.classList.add('d-none');
+            ticketContainer.classList.remove('d-block');
+
+
         }
     }
 
@@ -61,6 +73,9 @@ reset.addEventListener('click', function() {
     username.value = '';
     km.value = '';
     ageRange.value = 'choose';
+    ticketContainer.classList.remove('d-block');
+    ticketContainer.classList.add('d-none');
+    errorMessage.innerHTML = '';
     
 
 });

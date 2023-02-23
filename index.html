@@ -10,12 +10,12 @@
 <body>
 
      <!--    HEADER    -->
-     <header>
-        <a href="#"><h3>ACQUISTA IL BIGLIETTO</h3></a>
+     <header class="text-center space-between align-items-center">
+        <a class="d-none" href="#"><h3>ACQUISTA IL BIGLIETTO</h3></a>
 
         <h1>MEGA FERROVIE</h1>
 
-        <ul>
+        <ul class="d-none">
             <li><a href="#">Home</a></li>
             <li><a href="#">Cerca</a></li>
             <li><a href="#">Supporto</a></li>
@@ -27,20 +27,21 @@
 
 
     <main>
-        <form class="d-flex space-between align-items-center wrap">
-            <div class="w-three-columns">
+        <form class=" space-between text-center align-items-center wrap">
+            <div class="form-top">
                 <label for="username">Nome e Cognome</label>
                 <br>
                 <input type="text" id="username" />
             </div>
 
-            <div class="w-three-columns">
+            <div class="form-top">
                 <label for="km">Km da percorrere</label>
                 <br>
                 <input type="text" id="km" />
             </div>
 
-            <div class="w-three-columns">
+            <div class="form-top">
+                <br />
                 <select id="ageRange">
                     <option value="choose" >-Scegli tariffa-</option>
                     <option value="standard" >Standard</option>
@@ -50,35 +51,37 @@
             </div>
 
             
-            <div class="w-20">
+            <div class="justify-content-center text-center">
                 <button type="button" id="generator">Genera Biglietto</button>
                 <button type="reset" id="reset">Annulla</button>
             </div>
-            <div class="grow text-center" id="errorMessage"></div>
+            <div class=" text-center" id="errorMessage"></div>
         </form>
+        
+        <div id="ticketContainer" class="d-none">
+            <div id="ticket" class=" text-center space-around">
 
-        <div id="ticket" class="d-none space-between">
+                <div class="card">
+                    <h4>Biglietto Treno</h4>
+                    <h2 id="nameSurname"></h2>
+                </div>
 
-            <div class="card w-40">
-                <h3>Biglietto Treno</h3>
-                <h2 id="nameSurname"></h2>
+                <div class="card">
+                    <h4>tariffa</h4>
+                    <h2 id="tarifs"></h2>
+                </div>
+
+                <div class="card">
+                    <h4>Prezzo</h4>
+                    <h2 id="priceTab"></h2>
+                </div>
+
+                <div class="card">
+                    <h4>Cod. Passeggero</h4>
+                    <h2 id="passengerCode"></h2>
+                </div>
+                        
             </div>
-
-            <div class="card w-20">
-                <h4>tariffa</h4>
-                <span id="tarifs"></span>
-            </div>
-
-            <div class="card w-20">
-                <h4>Prezzo</h4>
-                <h2 id="priceTab"></h2>
-            </div>
-
-            <div class="card w-20">
-                <h4>Cod. Passeggero</h4>
-                <h2 id="passengerCode"></h2>
-            </div>
-                    
         </div>
     </main>
 
