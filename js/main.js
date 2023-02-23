@@ -11,8 +11,9 @@ const tarifs = document.querySelector("#tarifs");
 
 
 let km = document.querySelector("#km");
-
 let randomNumber;
+let price;
+
 //console.log(typeof(parseInt(km)));
 
 
@@ -20,11 +21,10 @@ let randomNumber;
 
 //confirm button
 generator.addEventListener('click', function() {
-    price = pricePerKm * km;
-    console.log(pricePerKm * km);
+    km = parseInt(km);
+    price = (pricePerKm * parseInt(km));
     nameSurname.innerHTML = username.value;
     tarifs.innerHTML = ageRange.value;
-    
     randomNumber = Math.floor(Math.random() * 10000 ) + 90000;
     passengerCode.innerHTML = randomNumber;
 
@@ -34,26 +34,24 @@ generator.addEventListener('click', function() {
         
         if(ageRange.value == "standard"){
             priceTab.innerHTML = price;
-            console.log(price);
+            
 
         } else if(ageRange.value == "under18"){
             priceTab.innerHTML = price - (price * 100 / 20);
-            console.log(price);
+         
             
         } else if(ageRange.value == "over65"){
             priceTab.innerHTML = price - (price * 100 / 40);
-            console.log(price);
+           
         } else {
             errorMessage.innerHTML = 'ATTENZIONE: Selezionare tariffa prima di premere "Genera Biglietto"'
         }
     // }
 
 
-    console.log(price);
-    console.log(randomNumber);
-    console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}`);
-    console.log(typeof(parseInt(km)));
-    console.log(typeof(parseInt(price)));
+
+    console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}` + `${price}` + `${randomNumber}`);
+ 
 });
 
 
