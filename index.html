@@ -9,63 +9,78 @@
 </head>
 <body>
 
-    <form class="d-flex space-between">
-        <div>
-            <label for="username">Nome e Cognome</label>
-            <br>
-            <input type="text" id="username" />
-        </div>
+     <!--    HEADER    -->
+     <header>
+        <a href="#"><h3>ACQUISTA IL BIGLIETTO</h3></a>
 
-        <div>
-            <label for="km">Km da percorrere</label>
-            <br>
-            <input type="text" id="km" />
-        </div>
+        <h1>MEGA FERROVIE</h1>
 
-        <div>
-            <select id="ageRange">
-                <option value="choose" >-Scegli tariffa-</option>
-                <option value="standard" >Standard</option>
-                <option value="under18" >Under 18</option>
-                <option value="over65" >Over 65</option>
-            </select>
-        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cerca</a></li>
+            <li><a href="#">Supporto</a></li>
+        </ul>
+    </header>
+    <!--     FINE HEADER    -->
 
-        <div id="errorMessage"></div>
 
-        <div>
-            <button type="button" id="generator">Genera Biglietto</button>
+
+
+    <main>
+        <form class="d-flex space-between align-items-center wrap">
+            <div class="w-three-columns">
+                <label for="username">Nome e Cognome</label>
+                <br>
+                <input type="text" id="username" />
+            </div>
+
+            <div class="w-three-columns">
+                <label for="km">Km da percorrere</label>
+                <br>
+                <input type="text" id="km" />
+            </div>
+
+            <div class="w-three-columns">
+                <select id="ageRange">
+                    <option value="choose" >-Scegli tariffa-</option>
+                    <option value="standard" >Standard</option>
+                    <option value="under18" >Under 18</option>
+                    <option value="over65" >Over 65</option>
+                </select>
+            </div>
+
             
-            <button type="reset" id="reset">Annulla</button>
+            <div class="w-20">
+                <button type="button" id="generator">Genera Biglietto</button>
+                <button type="reset" id="reset">Annulla</button>
+            </div>
+            <div class="grow text-center" id="errorMessage"></div>
+        </form>
+
+        <div id="ticket" class="d-none space-between">
+
+            <div class="card w-40">
+                <h3>Biglietto Treno</h3>
+                <h2 id="nameSurname"></h2>
+            </div>
+
+            <div class="card w-20">
+                <h4>tariffa</h4>
+                <span id="tarifs"></span>
+            </div>
+
+            <div class="card w-20">
+                <h4>Prezzo</h4>
+                <h2 id="priceTab"></h2>
+            </div>
+
+            <div class="card w-20">
+                <h4>Cod. Passeggero</h4>
+                <h2 id="passengerCode"></h2>
+            </div>
+                    
         </div>
-    </form>
-
-    <div id="ticket" class="d-flex space-between">
-
-        <div class="card">
-            <h3>Biglietto Treno</h3>
-            <h2 id="nameSurname"></h2>
-        </div>
-
-        <div class="card">
-            <h4>tariffa</h4>
-            <span id="tarifs"></span>
-        </div>
-
-        <div class="card">
-            <h4>Prezzo</h4>
-            <h2 id="priceTab"></h2>
-        </div>
-
-        <div class="card">
-            <h4>Cod. Passeggero</h4>
-            <h2 id="passengerCode"></h2>
-        </div>
-                
-
-
-    </div>
-   
+    </main>
 
 
 
