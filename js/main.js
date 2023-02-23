@@ -21,32 +21,32 @@ let price;
 
 //confirm button
 generator.addEventListener('click', function() {
-    km = parseInt(km);
-    price = (pricePerKm * parseInt(km));
+    
+    price = (pricePerKm * parseInt(km.value));
     nameSurname.innerHTML = username.value;
     tarifs.innerHTML = ageRange.value;
     randomNumber = Math.floor(Math.random() * 10000 ) + 90000;
     passengerCode.innerHTML = randomNumber;
 
-    // if(isNaN(parseInt(km))){
-    //     errorMessage.innerHTML = 'ATTENZIONE: Inserire solo numeri nel campo "Km da percorrere"'
-    // } else {
+    if(isNaN(parseInt(km.value))){
+        errorMessage.innerHTML = 'ATTENZIONE: Inserire solo numeri nel campo "Km da percorrere"'
+    } else {
         
         if(ageRange.value == "standard"){
             priceTab.innerHTML = price;
             
 
         } else if(ageRange.value == "under18"){
-            priceTab.innerHTML = price - (price * 100 / 20);
+            priceTab.innerHTML = price - (price * 20 / 100);
          
             
         } else if(ageRange.value == "over65"){
-            priceTab.innerHTML = price - (price * 100 / 40);
+            priceTab.innerHTML = price - (price * 40 / 100);
            
         } else {
             errorMessage.innerHTML = 'ATTENZIONE: Selezionare tariffa prima di premere "Genera Biglietto"'
         }
-    // }
+    }
 
 
 
