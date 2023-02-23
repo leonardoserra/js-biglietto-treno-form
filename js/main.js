@@ -1,9 +1,10 @@
 const username = document.querySelector("#username");
-let km = document.querySelector("#km");
+const km = document.querySelector("#km");
 const generator = document.querySelector("#generator");
 const reset = document.querySelector("#reset");
-
+const ageRange = document.querySelector("#ageRange");
 //km = parseInt(km);
+console.log(ageRange.value);
 
 
 generator.addEventListener('click', function() {

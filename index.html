@@ -8,15 +8,36 @@
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
-    <label for="username">Nome e Cognome</label>
-    <input type="text" id="username" />
 
-    <label for="km">Km da percorrere</label>
-    <input type="text" id="km" />
+    <form class="d-flex space-between">
+        <div>
+            <label for="username">Nome e Cognome</label>
+            <br>
+            <input type="text" id="username" />
+        </div>
 
-    <button id="generator">Genera Biglietto</button>
-    <button id="reset">Annulla</button>
-    
+        <div>
+            <label for="km">Km da percorrere</label>
+            <br>
+            <input type="text" id="km" />
+        </div>
+
+        <div>
+            <select id="ageRange">
+                <option value="choose" >-Scegli tariffa-</option>
+                <option value="standard" >Standard</option>
+                <option value="under18" >Under 18</option>
+                <option value="over65" >Over 65</option>
+            </select>
+        </div>
+
+        <div>
+            <button type="button" id="generator">Genera Biglietto</button>
+            
+            <button type="reset" id="reset">Annulla</button>
+        </div>
+    </form>
+   
 
 
 
