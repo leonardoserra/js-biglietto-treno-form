@@ -33,15 +33,15 @@ generator.addEventListener('click', function() {
     } else {
         
         if(ageRange.value == "standard"){
-            priceTab.innerHTML = price.toFixed(2);
+            priceTab.innerHTML = price.toFixed(2) + "€";
             
 
         } else if(ageRange.value == "under18"){
-            priceTab.innerHTML = (price - (price * 20 / 100)).toFixed(2);
+            priceTab.innerHTML = (price - (price * 20 / 100)).toFixed(2) + "€";
          
             
         } else if(ageRange.value == "over65"){
-            priceTab.innerHTML = (price - (price * 40 / 100)).toFixed(2);
+            priceTab.innerHTML = (price - (price * 40 / 100)).toFixed(2) + "€";
            
         } else {
             errorMessage.innerHTML = 'ATTENZIONE: Selezionare tariffa prima di premere "Genera Biglietto"'
@@ -61,6 +61,7 @@ reset.addEventListener('click', function() {
     username.value = '';
     km.value = '';
     ageRange.value = 'choose';
+    
 
 });
 
