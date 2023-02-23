@@ -1,11 +1,12 @@
 const username = document.querySelector("#username");
-let km = document.querySelector("#km");
 const generator = document.querySelector("#generator");
 const reset = document.querySelector("#reset");
 const ageRange = document.querySelector("#ageRange");
 const priceTab = document.querySelector("#priceTab");
 const pricePerKm = 0.21;
+const passengerCode = document.getElementById('passengerCode');
 
+let km = document.querySelector("#km");
 let nameSurname = document.querySelector("#nameSurname");
 let tarifs = document.querySelector("#tarifs");
 let price = pricePerKm * km;
@@ -22,8 +23,10 @@ generator.addEventListener('click', function() {
     tarifs.innerHTML = ageRange.value;
     priceTab.innerHTML = price;
     randomNumber = Math.floor(Math.random() * 10000 ) + 90000;
+    passengerCode.innerHTML = randomNumber;
+
+
     console.log(randomNumber);
-    
     console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}`);
     console.log(typeof(parseInt(km)));
     console.log(typeof(parseInt(price)));
