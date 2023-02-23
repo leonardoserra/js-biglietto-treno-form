@@ -8,28 +8,25 @@ const pricePerKm = 0.21;
 
 let nameSurname = document.querySelector("#nameSurname");
 let tarifs = document.querySelector("#tarifs");
-let price = pricePerKm * parseInt(km);
-console.log(typeof(parseInt(km)));
-//km = parseInt(km.value);
+let price = pricePerKm * km;
+let randomNumber;
+//console.log(typeof(parseInt(km)));
+
 
 
 
 //confirm button
 generator.addEventListener('click', function() {
-
-    //if(isNaN(km)) {
-        //console.log("ATTENZIONE: Inserire solo numeri dentro casella Km da percorrere");
-    //}else{
-        console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}`);
-        console.log(typeof(parseInt(km)));
-
-        nameSurname.innerHTML = username.value;
-        tarifs.innerHTML = ageRange.value;
-        priceTab.innerHTML = parseInt(price);
-        
-
-    //}
+   
+    nameSurname.innerHTML = username.value;
+    tarifs.innerHTML = ageRange.value;
+    priceTab.innerHTML = price;
+    randomNumber = Math.floor(Math.random() * 10000 ) + 90000;
+    console.log(randomNumber);
     
+    console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}`);
+    console.log(typeof(parseInt(km)));
+    console.log(typeof(parseInt(price)));
 });
 
 
