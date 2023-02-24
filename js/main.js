@@ -62,7 +62,7 @@ generator.addEventListener('click', function() {
 
 
 
-    console.log(`${username.value}` + ` ${parseInt(km.value)}` + ` ${ageRange.value}` + ` ${price}` + ` ${randomNumber}`);
+    console.log(`${username.value} ${parseInt(km.value)} ${ageRange.value} ${price} ${randomNumber}`);
  
 });
 
