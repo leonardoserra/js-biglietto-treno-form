@@ -29,7 +29,7 @@ generator.addEventListener('click', function() {
     price = (pricePerKm * parseInt(km.value));
     nameSurname.innerHTML = username.value;
     tarifs.innerHTML = ageRange.value;
-    randomNumber = Math.floor(Math.random() * 10000 ) + 90000;
+    randomNumber = Math.floor(Math.random() * (100000 - 90000) ) + 90000;
     passengerCode.innerHTML = randomNumber;
 
     if(isNaN(parseInt(km.value))){
